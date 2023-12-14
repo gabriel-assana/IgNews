@@ -5,10 +5,9 @@ import { FiX } from 'react-icons/fi';
 import styles from './styles.module.scss';
 
 export function SignInButton(){
+    const [session] = useSession()
 
-    const[session] = useSession()
-
-    return session ?(
+    return session ? (
         <button 
             type="button"
             className={styles.signInButton}
