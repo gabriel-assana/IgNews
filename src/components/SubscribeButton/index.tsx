@@ -3,6 +3,7 @@ import { api } from '../../services/api';
 import styles from './styles.module.scss';
 import { getStripeJs } from '../../services/stripe-js';
 import { Any } from 'faunadb';
+import { useRouter } from 'next/router';
 
 
 interface SubscribeButtoProps {
@@ -11,10 +12,16 @@ interface SubscribeButtoProps {
 
 export function SubscribeButton({ priceId }:SubscribeButtoProps){
     const [session] = useSession();
+    const router = useRouter()
 
     async function handleSubscirbe() {
         if (!session){
             signIn('github')
+            return;
+        }
+
+        if (session.activeSubscription) {
+            router.push('/posts')
             return;
         }
 
