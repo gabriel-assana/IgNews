@@ -8,11 +8,6 @@
 <p align="center">Portal de notícias com CMS e meio de pagamento integrado</p> 
  <p align="center">Aplicação desenvolvida no curso IGNITE da <a href="https://www.rocketseat.com.br/">@rocketseat</a> </p>
 
-<p align="center">
-  <a href="https://github.com/FelipenKniess/ignews/blob/main/LICENSE">
-    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License MIT">
-  </a>  
-</p>
 
 ## 🎯 Sobre
 
